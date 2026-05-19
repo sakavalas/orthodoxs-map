@@ -1,0 +1,529 @@
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.saint-icon-wrap {
+  width: 45px;
+  height: 42px;
+  border-radius: 50%;
+  padding: 3px;
+  background: gold;
+  box-shadow: 0 0 18px rgba(255, 215, 0, 0.95);
+  overflow: hidden;
+  border: 2px solid white;
+}
+
+.saint-icon-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.popup-card {
+  width: 220px;
+  text-align: center;
+}
+
+.popup-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  background: radial-gradient(circle, #f7d774, #b8860b);
+  padding: 6px;
+  border-radius: 50%;
+  border: 3px solid gold;
+}
+
+.popup-card h2 {
+  margin: 8px 0 4px;
+  font-size: 18px;
+}
+
+.popup-card p {
+  font-size: 14px;
+}
+
+.saint-path {
+  stroke: gold;
+  stroke-width: 4;
+  stroke-opacity: 0.9;
+  filter: drop-shadow(0 0 6px gold);
+}
+
+.life-point {
+  fill: white;
+  stroke: gold;
+  stroke-width: 3;
+}
+.feast-day .saint-icon-wrap {
+  animation: holyPulse 2s infinite;
+  background: gold;
+  box-shadow:
+    0 0 12px gold,
+    0 0 25px gold,
+    0 0 45px rgba(255, 215, 0, 0.9);
+}
+
+@keyframes holyPulse {
+  0% {
+    transform: scale(1);
+    box-shadow:
+      0 0 10px gold,
+      0 0 20px gold;
+  }
+
+  50% {
+    transform: scale(1.15);
+    box-shadow:
+      0 0 25px gold,
+      0 0 55px gold,
+      0 0 90px rgba(255, 215, 0, 0.95);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 10px gold,
+      0 0 20px gold;
+  }
+}
+.saint-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 340px;
+  height: 100vh;
+
+  background: rgba(20, 20, 20, 0.96);
+
+  color: white;
+
+  z-index: 2000;
+
+  padding: 20px;
+
+  overflow-y: auto;
+
+  box-shadow: -5px 0 20px rgba(0,0,0,0.5);
+
+  backdrop-filter: blur(10px);
+}
+
+.saint-sidebar img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 18px;
+}
+
+.saint-sidebar h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.saint-sidebar .feast {
+  color: gold;
+  font-weight: bold;
+}
+
+.saint-sidebar .bio {
+  line-height: 1.6;
+  margin-top: 18px;
+}
+
+.saint-sidebar button {
+  width: 100%;
+  margin-top: 14px;
+  padding: 12px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: gold;
+  color: black;
+
+  font-weight: bold;
+  cursor: pointer;
+}
+.full-bio {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.full-bio h2 {
+  color: gold;
+  font-size: 22px;
+}
+
+.full-bio p {
+  white-space: pre-line;
+  line-height: 1.7;
+}
+.sidebar-button {
+  display: block;
+  width: 95%;
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 10px;
+  background: gold;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+.saint-page {
+  min-height: 100vh;
+  padding: 32px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 215, 0, 0.14), transparent 30%),
+    linear-gradient(135deg, #111, #1b1712);
+  color: #f7f1df;
+}
+
+.back-link {
+  color: gold;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.saint-hero {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 32px;
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.saint-hero img {
+  width: 220px;
+  height: 220px;
+
+  object-fit: contain;
+
+  background: radial-gradient(circle, #f7d774, #b8860b);
+
+  padding: 6px;
+
+  border-radius: 50%;
+  border: 4px solid gold;
+
+  box-shadow: 0 0 35px rgba(255, 215, 0, 0.45);
+}
+
+.page-label {
+  color: gold;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.saint-hero h1 {
+  font-size: 44px;
+  margin: 8px 0;
+}
+
+.page-feast {
+  color: #ffd95a;
+  font-weight: bold;
+}
+
+.page-summary {
+  max-width: 760px;
+  line-height: 1.7;
+}
+
+.gold-button {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: gold;
+  color: #111;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content-grid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 28px;
+  align-items: start;
+}
+
+.main-content,
+.info-card,
+.tradition-card {
+  padding: 28px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 215, 0, 0.18);
+}
+
+.info-card {
+  height: fit-content;
+  align-self: start;
+  position: sticky;
+  top: 24px;
+}
+.tradition-card {
+  padding: 28px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 215, 0, 0.18);
+}
+
+.main-content h2,
+.tradition-section h2,
+.gallery-section h2 {
+  color: gold;
+  margin-top: 0;
+}
+
+.main-content p,
+.tradition-card p {
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
+.info-card h3 {
+  color: gold;
+}
+
+.life-row {
+  border-left: 3px solid gold;
+  padding-left: 12px;
+  margin: 14px 0;
+}
+
+.life-row span {
+  color: #ffd95a;
+  font-weight: bold;
+}
+
+.life-row p {
+  margin: 4px 0 0;
+}
+
+.tradition-section,
+.gallery-section {
+  margin-top: 32px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px;
+}
+
+.gallery-grid img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 2px solid gold;
+}
+.media-hero {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 28px;
+  align-items: center;
+  padding: 30px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 215, 0, 0.22);
+}
+
+.media-hero img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid gold;
+  box-shadow: 0 0 35px rgba(255, 215, 0, 0.45);
+}
+
+.media-grid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.media-card {
+  padding: 22px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 215, 0, 0.18);
+}
+
+.media-card h3 {
+  color: gold;
+}
+
+.media-card p {
+  line-height: 1.6;
+}
+
+.video-placeholder {
+  height: 150px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  font-size: 42px;
+  color: gold;
+  background:
+    radial-gradient(circle, rgba(255, 215, 0, 0.18), transparent 45%),
+    linear-gradient(135deg, #2a2116, #111);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+}
+.video-frame iframe {
+  border-radius: 18px;
+}
+.apolytikio-section {
+  margin-top: 45px;
+}
+
+.apolytikio-section h2 {
+  color: gold;
+  margin-bottom: 18px;
+}
+
+.apolytikio-card {
+  padding: 22px;
+
+  border-radius: 22px;
+
+  background: rgba(255,255,255,0.06);
+
+  border: 1px solid rgba(255,215,0,0.18);
+}
+
+.apolytikio-card iframe {
+  border-radius: 18px;
+}
+
+.apolytikio-card h3 {
+  margin-top: 18px;
+  color: gold;
+}
+.menu-toggle {
+  position: fixed;
+  top: 90px;
+  left: 18px;
+  z-index: 3000;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 215, 0, 0.45);
+  background: rgba(20, 20, 20, 0.9);
+  color: gold;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 4000;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.app-menu {
+  width: 360px;
+  height: 100vh;
+  padding: 24px;
+  background: rgba(18, 16, 12, 0.98);
+  color: #f7f1df;
+  box-shadow: 8px 0 30px rgba(0, 0, 0, 0.55);
+  overflow-y: auto;
+}
+
+.menu-close {
+  float: right;
+  background: transparent;
+  border: none;
+  color: gold;
+  font-size: 34px;
+  cursor: pointer;
+}
+
+.app-menu h2 {
+  color: gold;
+  margin-bottom: 4px;
+}
+
+.menu-subtitle {
+  color: #d7c79a;
+  margin-top: 0;
+}
+
+.menu-search {
+  width: 94%;
+  margin: 18px 0;
+  padding: 13px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 215, 0, 0.35);
+  background: #111;
+  color: white;
+}
+
+.menu-links {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.menu-links a {
+  color: #f7f1df;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.menu-links a:hover {
+  color: gold;
+}
+
+.menu-results {
+  display: grid;
+  gap: 12px;
+}
+
+.menu-saint {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  text-decoration: none;
+  color: #f7f1df;
+  padding: 10px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 215, 0, 0.12);
+}
+
+.menu-saint img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid gold;
+}
+
+.menu-saint span {
+  display: block;
+  color: #d7c79a;
+  font-size: 13px;
+}
